@@ -81,7 +81,7 @@ void L1HOTreeProducer::analyze(const edm::Event& iEvent, const edm::EventSetup& 
   iEvent.getByToken(hoDataFrameToken_, hoDataFrame);
 
   if (hoDataFrame.isValid()) {
-    l1HO.SetHO(*hoDataFrame);
+    l1HO.SetHO(*hoDataFrame,iSetup);
   } else {
     edm::LogWarning("MissingProduct") << "HODataFrame not found. Branch will not be filled" << std::endl;
   }

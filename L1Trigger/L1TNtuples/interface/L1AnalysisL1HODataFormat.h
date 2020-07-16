@@ -11,22 +11,30 @@ namespace L1Analysis {
     void Reset() {
       nHcalDetIds = 0;
       nHcalQIESamples = 0;
+      sumQ = 0 ; 
       hcalDetIdIEta.clear();
       hcalDetIdIPhi.clear();
       hcalQIESample.clear();
       hcalQIESampleAdc.clear();
       hcalQIESampleDv.clear();
       hcalQIESampleEr.clear();
+      QIESampleFc.clear();
+      QIESampleFc_MPedestals.clear();
+      QIESamplePedestal.clear();
     }
 
     unsigned int nHcalDetIds;
     unsigned int nHcalQIESamples;
+    double sumQ ; 
     std::vector<int> hcalDetIdIEta;
     std::vector<int> hcalDetIdIPhi;
     std::vector<int> hcalQIESample;
     std::vector<int> hcalQIESampleAdc;
     std::vector<int> hcalQIESampleDv;
     std::vector<int> hcalQIESampleEr;
+    std::vector<float> QIESampleFc;
+    std::vector<float> QIESamplePedestal;
+    std::vector<float> QIESampleFc_MPedestals;
   };
 }  // namespace L1Analysis
 #endif
