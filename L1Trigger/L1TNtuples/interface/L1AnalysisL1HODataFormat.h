@@ -21,6 +21,7 @@ namespace L1Analysis {
       QIESampleFc.clear();
       QIESampleFc_MPedestals.clear();
       QIESamplePedestal.clear();
+      SampleEnergy.clear();
     }
 
     unsigned int nHcalDetIds;
@@ -33,6 +34,7 @@ namespace L1Analysis {
     std::vector<int> hcalQIESampleDv;
     std::vector<int> hcalQIESampleEr;
     std::vector<float> QIESampleFc;
+    std::vector<float> SampleEnergy;
     std::vector<float> QIESamplePedestal;
     std::vector<float> QIESampleFc_MPedestals;
   };

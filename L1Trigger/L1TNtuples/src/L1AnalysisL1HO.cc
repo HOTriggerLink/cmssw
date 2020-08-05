@@ -45,6 +45,7 @@ void L1Analysis::L1AnalysisL1HO::SetHO(const edm::SortedCollection<HODataFrame>&
       l1ho_.QIESamplePedestal.push_back(calibrations.pedestal(capid));
       sumq += fc_ts[i] - calibrations.pedestal(capid);
       l1ho_.QIESampleFc_MPedestals.push_back(fc_ts[i] - calibrations.pedestal(capid));
+      l1ho_.SampleEnergy.push_back((fc_ts[i] - calibrations.pedestal(capid))*calibrations.respcorrgain(capid));
       ++l1ho_.nHcalQIESamples;
     }
     l1ho_.sumQ = sumq;
